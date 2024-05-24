@@ -6,7 +6,7 @@ const NewDrops = () => {
   return (
     <div className="bg-[#E7E7E3]">
       <div className="container py-10 flex justify-between items-center">
-        <h1 className="uppercase lg:text-6xl md:text-4xl sm:text-3xl text-2xl font-bold">
+        <h1 className="uppercase lg:text-6xl md:text-4xl sm:text-3xl text-2xl font-bold text-[#232321]">
           Don&apos;t miss out <br /> new drops
         </h1>
         <Button variant="blue">SHOP NEW DROPS</Button>

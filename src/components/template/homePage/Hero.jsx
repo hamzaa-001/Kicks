@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <div className="bg-[#E7E7E3]">
-      <h1 className="text-center text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[10rem] font-bold">
+      <h1 className="text-center text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[10rem] font-bold text-[#232321]">
         DO IT <span className="text-[#4A69E2]">RIGHT</span>
       </h1>
       <section className="w-full">
@@ -17,7 +17,7 @@ export default function Hero() {
                   NIKE AIR MAX
                 </h1>
                 <p className="absolute text-xs sm:text-sm md:text-lg lg:text-xl xl:text-xl bottom-16 sm:bottom-16 md:bottom-16 lg:bottom-24 xl:bottom-32 left-4 sm:left-8 md:left-12 lg:left-16 text-[#FAFAFA] max-w-[200px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[400px] dark:text-gray-400 text-left">
-                  Nike introducing the new air max for everyone&apos;s co mfort
+                  Nike introducing the new air max for everyone&apos;s comfort
                 </p>
                 <Button
                   variant="blue"

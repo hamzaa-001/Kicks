@@ -6,7 +6,7 @@ const Reviews = () => {
   return (
     <div className="bg-[#E7E7E3] pt-10">
       <div className="container py-10 flex justify-between items-center ">
-        <h1 className="uppercase lg:text-6xl md:text-4xl sm:text-3xl text-2xl font-bold">
+        <h1 className="uppercase lg:text-6xl md:text-4xl sm:text-3xl text-2xl font-bold text-[#232321]">
           Reviews
         </h1>
         <Button variant="blue">SEE ALL</Button>

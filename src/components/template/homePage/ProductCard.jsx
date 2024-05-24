@@ -14,9 +14,11 @@ export default function ProductCard({ productName, productImgURL, price }) {
           className="w-full h-auto object-contain"
         />
       </div>
-      <h2 className="mt-4 text-lg font-bold text-center">{productName}</h2>
+      <h2 className="mt-4 text-lg font-bold text-center text-[#232321]">
+        {productName}
+      </h2>
       <div className="mt-4 text-center">
-        <Button className="bg-black text-white px-4 py-2 rounded-lg w-full">
+        <Button className="bg-[#232321] text-white px-4 py-2 rounded-lg w-full">
           VIEW PRODUCT - <span className="text-[#FFA52F]">${price}</span>
         </Button>
       </div>

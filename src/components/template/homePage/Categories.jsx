@@ -21,7 +21,7 @@ const Categories = () => {
               className="-mt-32"
             />
             <div>
-              <h1 className="absolute bottom-40 left-20 text-4xl font-bold uppercase">
+              <h1 className="absolute bottom-40 left-20 text-4xl font-bold uppercase text-[#232321]">
                 Lifestyle <br /> Shoes
               </h1>
               <Button className="absolute bottom-44 right-20 ">
@@ -38,7 +38,7 @@ const Categories = () => {
               className="-mt-32"
             />
             <div>
-              <h1 className="absolute bottom-40 left-20 text-4xl font-bold uppercase">
+              <h1 className="absolute bottom-40 left-20 text-4xl font-bold uppercase text-[#232321]">
                 BasketBall <br /> Shoes
               </h1>
               <Button className="absolute bottom-44 right-20 ">

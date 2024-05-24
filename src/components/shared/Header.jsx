@@ -14,9 +14,11 @@ import Image from "next/image";
 import LogoBlack from "../../../public/Logo black.png";
 import Avatar from "../../../public/user-vector.png";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [signedIn, isSignedIn] = useState(false);
+  const router = useRouter();
 
   return (
     <header className="flex items-center justify-between px-6 py-6 bg-white  dark:bg-gray-950 dark:text-gray-50 md:px-6 rounded-3xl">
@@ -80,7 +82,12 @@ export default function Header() {
           <SearchIcon className="w-5 h-5" />
           <span className="sr-only">Search</span>
         </Button>
-        <Button className="rounded-full" size="icon" variant="ghost">
+        <Button
+          onClick={() => router.push("/cart")}
+          className="rounded-full"
+          size="icon"
+          variant="ghost"
+        >
           <ShoppingCartIcon className="w-5 h-5" />
           <span className="sr-only">Cart</span>
         </Button>
