@@ -15,24 +15,26 @@ const Footer = () => {
               </h2>
               <p className="mt-4">Sign up for free! Join the community.</p>
 
-              <div className="mt-4 flex">
+              <div className="mt-4 flex gap-2">
                 <input
                   type="email"
                   placeholder="Email address"
-                  className="px-4 py-2 rounded-l-md focus:outline-none bg-transparent border-2 border-white"
+                  className="px-4 py-2 rounded-md focus:outline-none bg-transparent border border-white placeholder:text-gray-200"
                 />
-                <button className="px-4 py-2 bg-[#232321] text-white rounded-r-md">
+                <button className="px-4 py-2 bg-[#232321] text-white rounded-md">
                   SUBMIT
                 </button>
               </div>
             </div>
-            <Image
-              src={logoFooterOne}
-              width={380}
-              height={70}
-              alt="logo"
-              className="lg:block xl:block hidden"
-            />
+            <div>
+              <Image
+                src={logoFooterOne}
+                width={380}
+                height={70}
+                alt="logo"
+                className="lg:block xl:block hidden"
+              />
+            </div>
           </div>
         </div>
         <div className="bg-[#232321] text-white pt-8 px-8 rounded-3xl">
@@ -84,8 +86,8 @@ const Footer = () => {
 
         <div className="text-center py-4 text-gray-600 text-sm">
           <div className="max-w-7xl mx-auto">
-            © All rights reserved | Made with{" "}
-            <span className="text-red-500">❤️</span> by{" "}
+            © All rights reserved | Made with
+            <span className="text-red-500">❤️</span> by
             <a href="#" className="text-blue-500">
               Hamza Shahid
             </a>

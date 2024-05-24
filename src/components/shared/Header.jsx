@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet";
 import Link from "next/link";
@@ -11,8 +13,11 @@ import {
 import Image from "next/image";
 import LogoBlack from "../../../public/Logo black.png";
 import Avatar from "../../../public/user-vector.png";
+import { useState } from "react";
 
 export default function Header() {
+  const [signedIn, isSignedIn] = useState(false);
+
   return (
     <header className="flex items-center justify-between px-6 py-6 bg-white  dark:bg-gray-950 dark:text-gray-50 md:px-6 rounded-3xl">
       <div className="flex items-center gap-4">
@@ -65,7 +70,7 @@ export default function Header() {
       <div className="flex-1 flex justify-center">
         <Link
           className="flex items-center justify-center text-2xl font-bold"
-          href="#"
+          href="/"
         >
           <Image src={LogoBlack} height={120} width={120} alt="logo" />
         </Link>
@@ -79,20 +84,29 @@ export default function Header() {
           <ShoppingCartIcon className="w-5 h-5" />
           <span className="sr-only">Cart</span>
         </Button>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button className="rounded-full" size="icon" variant="ghost">
-              <Image src={Avatar} height={20} width={20} alt="avatar" />
-              <span className="sr-only">User menu</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem>Profile</DropdownMenuItem>
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Logout</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        {signedIn ? (
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="rounded-full" size="icon" variant="ghost">
+                <Image src={Avatar} height={20} width={20} alt="avatar" />
+                <span className="sr-only">User menu</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Logout</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        ) : (
+          <Link
+            href={"/register"}
+            className=" bg-[#232321] text-white px-4 py-2 rounded-md"
+          >
+            Sign Up
+          </Link>
+        )}
       </div>
     </header>
   );
@@ -115,25 +129,6 @@ function MenuIcon(props) {
       <line x1="4" x2="20" y1="12" y2="12" />
       <line x1="4" x2="20" y1="6" y2="6" />
       <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
-  );
-}
-
-function MountainIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
   );
 }
