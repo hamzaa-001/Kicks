@@ -1,8 +1,13 @@
+"use client";
+
 import { FaTrashAlt } from "react-icons/fa";
 import Image from "next/image";
-import productImg from "../../../public/product-img-1.png";
+import { useSelector } from "react-redux";
 
-const page = () => {
+const Cart = () => {
+  const items = useSelector((state) => state.cart.products);
+  const { products, total } = useSelector((state) => state.cart);
+
   return (
     <div>
       <div className="bg-[#E7E7E3] p-8">
@@ -24,49 +29,46 @@ const page = () => {
                 Items in your bag not reserved - check out now to make them
                 yours.
               </p>
-              <div className="mt-4 flex items-center border-b pb-4">
-                <div className="w-32 h-32">
-                  <Image
-                    src={productImg}
-                    alt="Dropset Trainer Shoes"
-                    width={150}
-                    height={150}
-                  />
-                </div>
-                <div className="ml-4 flex-1">
-                  <h3 className="text-lg font-bold text-[#232321]">
-                    DROPSET TRAINER SHOES
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Men&apos;s Road Running Shoes
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Enamel Blue/ University White
-                  </p>
-                  <div className="flex items-center mt-2">
-                    <label className="text-sm mr-2">Size:</label>
-                    <select className="border px-2 py-1 rounded-md">
-                      <option>10</option>
-                      <option>11</option>
-                      <option>12</option>
-                    </select>
+              {items.map((item) => (
+                <div
+                  key={item.id}
+                  className="mt-4 flex items-center border-b pb-4"
+                >
+                  <div className="w-32 h-32">
+                    <Image
+                      src={item.productImg}
+                      alt="Dropset Trainer Shoes"
+                      width={150}
+                      height={150}
+                    />
                   </div>
-                  <div className="flex items-center mt-2">
-                    <label className="text-sm mr-2">Quantity:</label>
-                    <select className="border px-2 py-1 rounded-md">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
+                  <div className="ml-4 flex-1">
+                    <h3 className="text-lg font-bold text-[#232321]">
+                      {item.name}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Men&apos;s Road Running Shoes
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Enamel Blue/ University White
+                    </p>
+
+                    <div className="flex items-center mt-2">
+                      <h1 className="text-sm mr-2">
+                        Quantity: {item.quantity}
+                      </h1>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-lg font-bold text-blue-600">
+                      ${item.price}
+                    </p>
+                    <button className="text-[#232321] mt-2">
+                      <FaTrashAlt />
+                    </button>
                   </div>
                 </div>
-                <div className="text-right">
-                  <p className="text-lg font-bold text-blue-600">$130.00</p>
-                  <button className="text-[#232321] mt-2">
-                    <FaTrashAlt />
-                  </button>
-                </div>
-              </div>
+              ))}
             </div>
 
             <div className=" p-8 rounded-lg">
@@ -74,12 +76,12 @@ const page = () => {
                 Order Summary
               </h2>
               <div className="mt-4 flex justify-between text-sm">
-                <span>1 ITEM</span>
-                <span>$130.00</span>
+                <span>{items.length} Items</span>
+                <span>${total}</span>
               </div>
               <div className="mt-2 flex justify-between text-sm">
                 <span>Delivery</span>
-                <span>$6.99</span>
+                <span>$0.00</span>
               </div>
               <div className="mt-2 flex justify-between text-sm">
                 <span>Sales Tax</span>
@@ -87,7 +89,7 @@ const page = () => {
               </div>
               <div className="mt-4 flex justify-between text-lg font-bold text-[#232321]">
                 <span>Total</span>
-                <span>$136.99</span>
+                <span>${total}</span>
               </div>
               <button className="mt-4 w-full bg-[#232321] text-white px-4 py-2 rounded-md">
                 CHECKOUT
@@ -103,4 +105,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Cart;

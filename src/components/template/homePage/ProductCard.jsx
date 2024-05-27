@@ -1,7 +1,13 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-export default function ProductCard({ productName, productImgURL, price }) {
+export default function ProductCard({
+  productName,
+  productImgURL,
+  price,
+  productId,
+}) {
   return (
     <div className="bg-[#E7E7E3] p-4 rounded-lg max-w-xs mx-auto mb-20">
       <div className="relative bg-white p-2 rounded-3xl">
@@ -18,9 +24,11 @@ export default function ProductCard({ productName, productImgURL, price }) {
         {productName}
       </h2>
       <div className="mt-4 text-center">
-        <Button className="bg-[#232321] text-white px-4 py-2 rounded-lg w-full">
-          VIEW PRODUCT - <span className="text-[#FFA52F]">${price}</span>
-        </Button>
+        <Link href={`/product-page/${productId}`}>
+          <Button className="bg-[#232321] text-white px-4 py-2 rounded-lg w-full">
+            VIEW PRODUCT - <span className="text-[#FFA52F]">${price}</span>
+          </Button>
+        </Link>
       </div>
     </div>
   );

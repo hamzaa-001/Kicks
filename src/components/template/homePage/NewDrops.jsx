@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { newDropDetails } from "@/constant";
 import ProductCard from "./ProductCard";
 
+
 const NewDrops = () => {
   return (
     <div className="bg-[#E7E7E3]">
@@ -19,6 +20,7 @@ const NewDrops = () => {
             productName={product.productName}
             price={product.price}
             productImgURL={product.productImage}
+            productId={product.id}
           />
         ))}
       </div>

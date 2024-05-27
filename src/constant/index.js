@@ -7,26 +7,26 @@ export const newDropDetails = [
   {
     id: 1,
     productImage: productImgOne,
-    productName: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
-    price: 125,
+    productName: "ADIDAS GAZELLE",
+    price: 99,
   },
   {
     id: 2,
     productImage: productImgTwo,
-    productName: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+    productName: "ADIDAS SUPERSTAR",
     price: 125,
   },
   {
     id: 3,
     productImage: productImgThree,
-    productName: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
-    price: 125,
+    productName: "ADIDAS NMD",
+    price: 299,
   },
   {
     id: 4,
     productImage: productImgFour,
-    productName: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
-    price: 125,
+    productName: "ADIDAS FORUM LOW",
+    price: 165,
   },
 ];
 
