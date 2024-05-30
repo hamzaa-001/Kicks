@@ -6,7 +6,7 @@ import logoFooterTwo from "../../../public/logo-footer-2.png";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-[#E7E7E3] p-8">
+      <footer className="bg-[#E7E7E3] p-4">
         <div className="bg-[#4A69E2] h-[280px]  text-white p-8 rounded-t-3xl -mb-10 ">
           <div className="max-w-7xl mx-auto flex justify-between">
             <div>
@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="bg-[#232321] text-white pt-8 px-8 rounded-3xl">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl text-[#FFA52F]">About us</h3>
+              <h3 className="text-xl text-[#FFA52F] mt-6">About us</h3>
               <p className="mt-4">
                 We are the biggest hyperstore in the universe. We got you all
                 cover with our exclusive collections and latest drops.

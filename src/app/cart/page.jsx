@@ -32,7 +32,7 @@ const Cart = () => {
               {items.map((item) => (
                 <div
                   key={item.id}
-                  className="mt-4 flex items-center border-b pb-4"
+                  className="mt-4 flex items-center border-b pb-8"
                 >
                   <div className="w-32 h-32">
                     <Image

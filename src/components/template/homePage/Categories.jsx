@@ -6,7 +6,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const Categories = () => {
   return (
-    <div className="bg-[#232321] w-full h-[110vh] relative overflow-hidden">
+    <div className="bg-[#232321] w-full lg:h-[110vh] sm:h-[100vh] h-[60vh] relative overflow-hidden">
       <div className="container py-10">
         <h1 className="uppercase lg:text-6xl md:text-4xl sm:text-3xl text-2xl font-bold text-white mb-10">
           Categories
@@ -21,7 +21,7 @@ const Categories = () => {
               className="-mt-32"
             />
             <div>
-              <h1 className="absolute bottom-40 left-20 text-4xl font-bold uppercase text-[#232321]">
+              <h1 className="hidden lg:block absolute bottom-40 left-20 text-4xl font-bold uppercase text-[#232321]">
                 Lifestyle <br /> Shoes
               </h1>
               <Button className="absolute bottom-44 right-20 ">
@@ -38,7 +38,7 @@ const Categories = () => {
               className="-mt-32"
             />
             <div>
-              <h1 className="absolute bottom-40 left-20 text-4xl font-bold uppercase text-[#232321]">
+              <h1 className="hidden lg:block absolute bottom-40 left-20 text-4xl font-bold uppercase text-[#232321]">
                 BasketBall <br /> Shoes
               </h1>
               <Button className="absolute bottom-44 right-20 ">

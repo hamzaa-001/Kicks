@@ -74,11 +74,15 @@ export default function Header() {
           className="flex items-center justify-center text-2xl font-bold"
           href="/"
         >
-          <Image src={LogoBlack} height={120} width={120} alt="logo" />
+          <Image src={LogoBlack} height={100} width={100} alt="logo" />
         </Link>
       </div>
       <div className="flex items-center gap-4">
-        <Button className="rounded-full" size="icon" variant="ghost">
+        <Button
+          className="rounded-full hidden lg:block"
+          size="icon"
+          variant="ghost"
+        >
           <SearchIcon className="w-5 h-5" />
           <span className="sr-only">Search</span>
         </Button>

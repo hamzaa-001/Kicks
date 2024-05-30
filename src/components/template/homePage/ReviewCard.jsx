@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 const ReviewCard = ({ userImg, reviewImg }) => {
   return (
     <div>
-      <div className="bg-[#E7E7E3] rounded-2xl max-w-xs mx-auto mb-20">
+      <div className="bg-[#E7E7E3] rounded-2xl max-w-xs mx-auto lg:mb-20 mb-10">
         <div className="bg-white p-4 rounded-t-2xl">
           <div className="flex items-center">
             <div className="flex-shrink-0">

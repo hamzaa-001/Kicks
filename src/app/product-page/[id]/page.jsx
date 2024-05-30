@@ -36,7 +36,7 @@ export default function ProductPage({ params }) {
                 <div className="flex justify-center items-center">
                   <div className="w-full h-full">
                     <Image
-                      src={product.productImage} // Replace with your image path
+                      src={product.productImage}
                       alt="Product Image"
                       layout="responsive"
                       width={700}

@@ -9,7 +9,7 @@ export default function ProductCard({
   productId,
 }) {
   return (
-    <div className="bg-[#E7E7E3] p-4 rounded-lg max-w-xs mx-auto mb-20">
+    <div className="bg-[#E7E7E3] p-4 rounded-lg max-w-xs mx-auto lg:mb-20">
       <div className="relative bg-white p-2 rounded-3xl">
         <div className="absolute top-1 left-1 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
           New
